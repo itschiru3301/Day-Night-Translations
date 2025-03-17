@@ -7,8 +7,7 @@ from torchvision import transforms
 from torch import nn
 
 # Streamlit App Title
-st.title("🌙 CycleGAN Real-Time Video Transformation")
-st.markdown("Convert day-to-night or night-to-day in real-time using your webcam! 🚀")
+st.title("Video Translations")
 
 # Sidebar Settings
 st.sidebar.header("Settings")
