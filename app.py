@@ -7,7 +7,7 @@ from torchvision import transforms
 from torch import nn
 
 # Streamlit App Title
-st.title("Video Translations")
+st.title("Day-Night translations")
 
 # Sidebar Settings
 st.sidebar.header("Settings")
