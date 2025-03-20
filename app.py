@@ -27,11 +27,11 @@ import torch.nn as nn
 import numpy as np
 from PIL import Image
 from torchvision import transforms
-from torch import nn
+import av
+from streamlit_webrtc import webrtc_streamer
 
 # Streamlit App Title
-st.title("🌙 CycleGAN Real-Time Video Transformation")
-st.markdown("Convert day-to-night or night-to-day in real-time using your webcam! 🚀")
+st.title("Day-Night translations")
 
 # Sidebar Settings
 st.sidebar.header("Settings")
@@ -41,6 +41,8 @@ transform_type = st.sidebar.radio("Select Transformation", ("Day to Night", "Nig
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Model Definition (Must Match Training)
+
+# Generator definition
 class Generator(nn.Module):
     def __init__(self):
         super().__init__()
