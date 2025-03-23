@@ -86,8 +86,6 @@ def process_frame(frame: av.VideoFrame, model) -> av.VideoFrame:
     return av.VideoFrame.from_ndarray(output[..., ::-1].astype(np.uint8), format="bgr24")
 
 def main():
-    st.title("Real-Time Day/Night Converter")
-    
     # Model selection
     mode = st.radio("Conversion Mode:", 
                    ("Day → Night", "Night → Day"),
