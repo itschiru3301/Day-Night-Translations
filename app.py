@@ -33,9 +33,6 @@ from streamlit_webrtc import webrtc_streamer
 # Streamlit App Title
 st.title("Day-Night translations")
 
-# Sidebar Settings
-st.sidebar.header("Settings")
-transform_type = st.sidebar.radio("Select Transformation", ("Day to Night", "Night to Day"))
 
 # Device Configuration
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
