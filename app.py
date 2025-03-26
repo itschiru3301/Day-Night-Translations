@@ -92,7 +92,7 @@ def main():
                    horizontal=True)
     
     # Load model
-    model = load_model("generator_g.pth" if mode == "Day → Night" else "generator_f.pth")
+    model = load_model("generator_g (1).pth" if mode == "Day → Night" else "generator_f (1).pth")
     
     # WebRTC component
     webrtc_ctx = webrtc_streamer(
